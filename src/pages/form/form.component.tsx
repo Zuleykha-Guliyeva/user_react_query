@@ -8,11 +8,13 @@ const FormComponent = () => {
   const onFinish = (values: any) => {
     console.log("Success:", values);
   };
+  
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const name = searchParams.get("name") || "";
   const age = parseInt(searchParams.get("age")) || 0;
   const email = searchParams.get("email") || "";
+
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };

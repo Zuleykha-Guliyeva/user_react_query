@@ -51,6 +51,11 @@ function TableComponent() {
       render: (_, record) => (
         <Space size="middle">
           <Link
+            to={`/details?name=${record.name}&age=${record.age}&email=${record.email}`}
+          >
+            <button>Details</button>
+          </Link>
+          <Link
             to={`/form?name=${record.name}&age=${record.age}&email=${record.email}`}
           >
             <button>Update</button>
